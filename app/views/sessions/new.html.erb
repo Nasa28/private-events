@@ -1,2 +1,7 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1>Log In</h1>
+<h4>Kindly Login with your username</h4>
+<%= form_with(url:login_path, scope: :session, local: true) do |form| %>
+  <%= form.text_field :username %>
+  <%= form.submit value = "Sign Up" %>
+<% end %>
+
