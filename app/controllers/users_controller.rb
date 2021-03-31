@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include ApplicationHelper
   def new
     @user = User.new
   end
@@ -8,8 +9,9 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to private events App!"
-      redirect_to new_sessions_path
+      redirect_to @user
     else
+      flash.now[:danger] = "Welcome to private events App!"
       render :new
     end
   end
