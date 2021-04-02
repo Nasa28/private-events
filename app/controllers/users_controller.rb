@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to private events App!"
-      redirect_to @user
+      redirect_to events_path
     else
       flash.now[:danger] = "Welcome to private events App!"
       render :new
@@ -17,7 +17,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = current_user
+    @my_events = current_user.created_events
   end
 
   private
