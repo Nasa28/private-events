@@ -21,8 +21,8 @@
     <li><%= link_to "Sign Out", logout_path, method: :delete, class: "nav-link"%></li>
 
    <li><%= link_to "Create an event", new_event_path, class: "nav-link" if log_in?%></li>
-   <li><%= link_to current_user.username, pages_home_path, class: "nav-link" if log_in?%></li>
-   <li><%= link_to current_user.created_events.count, pages_home_path, class: "nav-link" if log_in?%></li>
+   <li><%= link_to current_user.username, root_path, class: "nav-link" if log_in?%></li>
+   <li><%= link_to current_user.created_events.count, root_path, class: "nav-link" if log_in?%></li>
     <li><%= link_to "Show my events", showpage_path, class: "nav-link"%> </li>
      <%end%>
     </ul>

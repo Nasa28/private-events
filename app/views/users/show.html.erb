@@ -1,6 +1,6 @@
 <h1>All my events</h1>
 <h2>List of all my events</h2>
   <% @my_events.each do |event| %>
-  <h3><%=link_to event.description, show_path%></h3>
+  <h3><%=link_to event.description, event%></h3>
   <strong>Date: <%= event.date%></strong><br>
  <%end%>
