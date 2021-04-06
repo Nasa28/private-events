@@ -1,1 +1,15 @@
 <%= @event.creator.username.capitalize%></h2>
+
+<span><%= @event.description %>: by <%= @event.creator.username %></span>
+<span><%= @event.date %></span>
+
+<%= event_button(@event, current_user) %>
+
+<br/>
+
+
+<h6>Who's Coming?</h6>
+<ul>
+<%= show_events_loop %> 
+</ul>
+

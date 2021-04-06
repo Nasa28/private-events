@@ -4,3 +4,21 @@
   <h3><%=link_to event.description, event%></h3>
   <strong>Date: <%= event.date%></strong><br>
  <%end%>
+
+<h3>Events I Created</h3>
+
+<ul>
+  <%= event_home(@user.created_events) %>
+ </ul>
+
+ <h3>Events I am attending</h3>
+
+ <ul>
+  <%= event_home(@attended_events_upcoming) %>
+ </ul>
+
+ <h3>Events I already attended</h3>
+
+ <ul>
+  <%= event_home(@attended_events_past) %>
+ </ul>
