@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  include ApplicationHelper
+  
   def new
     @user = User.new
   end
@@ -17,6 +17,13 @@ class UsersController < ApplicationController
   end
 
   def show
+
+    @user = current_user
+    @created_events = current_user.created_events
+    @created_events_upcoming = current_user.created_events.future.order('created_at DESC')
+    @created_events_past = current_user.created_events.past.order('created_at DESC')
+    @attended_events_upcoming = current_user.attended_events.future.order('created_at DESC')
+    @attended_events_past = current_user.attended_events.past.order('created_at DESC')
     @user = current_user
     @my_events = current_user.created_events
   end

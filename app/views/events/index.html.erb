@@ -1,9 +1,3 @@
-<h1>My index page</h1>
-<% if log_in?%>
-<% @events.each do |event|%>
-<h3><%=link_to event.description, event%></h3>
-  <strong>Date: <%= event.date%></strong><br> 
-   
-<%end%>
+<h3>List of created events</h3>
 
-<%end%>
+ <%= render '/partials/created_events' %>
