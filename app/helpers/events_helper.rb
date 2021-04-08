@@ -15,12 +15,13 @@ module EventsHelper
     end
     html_values.html_safe
   end
-	
-  # def event_home(events)
-  #   html_code = ''
-  #   events.each do |event|
-  #     html_code << "<li><a href='events/#{event[:id]}'>#{event[:description]}</a>; #{event[:date]}</li>"
-  #   end
-  #   html_code.html_safe
-  # end
+
+  
+  def events_attending(events)
+    html_code = ''
+    events.each do |event|
+      html_code << "<ul><a href='events/#{event[:id]}'>#{event[:description]}</a> on #{event[:date]}</ul>"
+    end
+    html_code.html_safe
+  end
 end

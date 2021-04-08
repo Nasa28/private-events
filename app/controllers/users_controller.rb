@@ -17,13 +17,11 @@ class UsersController < ApplicationController
   end
 
   def show
-
-    @user = current_user
-    @created_events = current_user.created_events
-    @created_events_upcoming = current_user.created_events.future.order('created_at DESC')
-    @created_events_past = current_user.created_events.past.order('created_at DESC')
-    @attended_events_upcoming = current_user.attended_events.future.order('created_at DESC')
-    @attended_events_past = current_user.attended_events.past.order('created_at DESC')
+    # @attending_events = current_user.attended_events
+    @upcoming_events = current_user.created_events.upcoming.order('date ASC')
+    #@created_events_past = current_user.created_events.past.order('created_at DESC')
+    @attended_events_upcoming = current_user.attended_events.upcoming.order('created_at DESC')
+   @attended_events_past = current_user.attended_events.past.order('created_at DESC')
     @user = current_user
     @my_events = current_user.created_events
   end
