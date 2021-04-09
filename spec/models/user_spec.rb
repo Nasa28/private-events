@@ -12,4 +12,20 @@ RSpec.describe User, type: :model do
       expect(user).to eq(true)
     end
   end
+
+  context 'association test'
+   it 'should have many created events' do
+     first = User.reflect_on_association(:created_events).macro
+     expect(first).to eq(:has_many)
+   end
+
+   it 'should have many created events' do
+    second = User.reflect_on_association(:attendable_events).macro
+    expect(second).to eq(:has_many)
+  end
+
+  it 'should have many created events' do
+    last = User.reflect_on_association(:attended_events).macro
+    expect(last).to eq(:has_many)
+  end
 end
