@@ -4,7 +4,7 @@ module EventsHelper
     return unless event[:creator_id] != current_user[:id]
     return if event[:date] < Time.zone.now
 
-    button_to 'Attend this event', action: :attend, method: :post
+    button_to 'Attend this event ', action: :attend, method: :post
   end
 
   def attendee_list
