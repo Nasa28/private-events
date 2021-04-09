@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  validates :description, presence: true, length: { in: 1..250 }
+  validates :description, presence: true, length: { max: 10 }
   validates :date, presence: true
   
   belongs_to :creator, class_name: "User"
