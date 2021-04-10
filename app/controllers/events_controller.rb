@@ -11,7 +11,7 @@ class EventsController < ApplicationController
 
   def create
     @event = current_user.created_events.build(event_params)
-    if @event.save
+    if @event.date >= DateTime.now && @event.save
       redirect_to showpage_path, notice: 'Event was successfully created.'
     else
       render 'new'
