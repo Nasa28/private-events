@@ -15,6 +15,7 @@
 - Capybara(Integration test)
 - Rspec (Unit test)
 - Bootstrap
+- Webpack
 
 ## Getting Started
 
@@ -27,7 +28,13 @@ git clone git@github.com:Nasa28/private-events.git
 ## Installations
 
 - Open a terminal and `cd` to the cloned repository.
+
 ```
+Run bundle exec rake webpacker:install
+
+```
+
+``` 
  Run `bundle install
 
 ```
