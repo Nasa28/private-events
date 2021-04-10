@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Users", type: :feature do
+RSpec.feature 'Users', type: :feature do
   context 'create new user' do
     scenario 'should be successful' do
       visit new_user_path
@@ -19,5 +19,5 @@ RSpec.feature "Users", type: :feature do
       click_button 'Sign Up'
       expect(current_path).not_to eq(events_path)
     end
-end
+  end
 end

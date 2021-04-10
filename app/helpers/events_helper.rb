@@ -1,6 +1,6 @@
 module EventsHelper
-	def attend_button(event, current_user)
-   return unless log_in?
+  def attend_button(event, current_user)
+    return unless log_in?
     return unless event[:creator_id] != current_user[:id]
     return if event[:date] < Time.zone.now
 
@@ -16,7 +16,6 @@ module EventsHelper
     html_values.html_safe
   end
 
-  
   def events_attending(events)
     html_code = ''
     events.each do |event|

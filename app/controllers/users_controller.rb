@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  
   def new
     @user = User.new
   end
@@ -8,10 +7,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to private events App!"
+      flash[:success] = 'Welcome to private events App!'
       redirect_to events_path
     else
-      flash.now[:danger] = "Welcome to private events App!"
+      flash.now[:danger] = 'Welcome to private events App!'
       render :new
     end
   end
