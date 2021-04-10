@@ -1,7 +1,10 @@
 
 # Private event project
 
-> The private event is a platform where registered users can create events, view and attend other people's event. It is a prototype of Eventbrite app
+ The private event is a platform where registered users can create events, view and attend other people's event. It is a prototype of Eventbrite app
+
+ ![screenshot](./app/assets/images/private-event.png)
+
 
 ## Built With
 
