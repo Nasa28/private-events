@@ -1,6 +1,10 @@
 <h1>Create an account</h1>
 <%= form_with model: @user do |form| %>
-  <%= form.text_field :username %>
-  <%= form.submit value = "Sign Up" %>
+
+<div class="form-group">
+  <%= form.text_field :username, placeholder: "Choose a username" %>
+  </div>
+
+  <%= form.submit value = "Sign Up", class: "btn btn-primary"%>
 <% end %>
 
