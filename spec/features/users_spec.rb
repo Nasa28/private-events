@@ -11,7 +11,7 @@ RSpec.feature "Users", type: :feature do
       expect(current_path).to eq(events_path)
     end
 
-    scenario 'should be successful' do
+    scenario 'should be failure' do
       visit new_user_path
       within('form') do
         fill_in 'user_username', with: ''
