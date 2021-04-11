@@ -23,6 +23,7 @@ class UsersController < ApplicationController
     @upcoming_attending_events = current_user.attended_events.upcoming.order('created_at DESC')
     @attended_events_past = current_user.attended_events.past.order('created_at DESC')
     @user = current_user
+    @my_events = current_user.created_events
   end
 
   private
