@@ -7,10 +7,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = 'Welcome to private events App!'
+      flash[:notice] = 'User is created successfully!'
       redirect_to events_path
     else
-      flash.now[:danger] = 'Welcome to private events App!'
+      flash.now[:notice] = 'Username is taken!'
       render :new
     end
   end

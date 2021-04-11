@@ -5,9 +5,9 @@ class SessionsController < ApplicationController
     @user = User.find_by(username: params[:session][:username])
     if @user
       log_in @user
-      redirect_to events_path
+      redirect_to events_path, notice: 'You have been successfully signed in'
     else
-      flash.now[:danger] = 'Invalid username'
+      flash.now[:notice] = 'Invalid username'
       render 'new'
     end
   end
