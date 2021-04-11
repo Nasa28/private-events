@@ -14,7 +14,7 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to showpage_path, notice: 'Event was successfully created.'
     else
-      flash.now[:notice] = "Description or date cannot be empty"
+      flash.now[:notice] = 'Description or date cannot be empty'
       render 'new'
     end
   end
