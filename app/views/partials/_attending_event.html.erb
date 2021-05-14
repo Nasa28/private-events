@@ -1,0 +1,4 @@
+<% @attending_events.each do |event|%>
+<h3><%=link_to event.description, event%></h3>
+  <strong>Date: <%= event.date%></strong><br> 
+  <%end%>

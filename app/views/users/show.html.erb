@@ -1,0 +1,16 @@
+<h3>Events <%= current_user.username.capitalize%> created</h3>
+  <% @my_events.each do |event| %>
+
+  <h4> <%= link_to event.description, showpage_path%> </h4>
+  <strong>Date: <%= event.date%> </strong>
+  <%end%>
+<br>
+<br>
+<h3>Events <%= current_user.username.capitalize%> is attending</h3>
+<%= render '/partials/upcoming_events'%>
+<br>
+
+<h3>Events <%= current_user.username.capitalize%> has attended</h3>
+
+<%= render '/partials/past_attended_event'%>
+ 

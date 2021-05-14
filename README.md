@@ -1,24 +1,69 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Private event project
 
-Things you may want to cover:
+ The private event is a platform where registered users can create events, view and attend other people's event. It is a prototype of Eventbrite app
 
-* Ruby version
+ ![screenshot](./app/assets/images/private-event.png)
 
-* System dependencies
 
-* Configuration
+## Built With
 
-* Database creation
+- Ruby 2.7
+- Ruby on Rails 6.1
+- SQLite 3
+- Devise gem
+- Capybara(Integration test)
+- Rspec (Unit test)
+- Bootstrap
+- Webpack
 
-* Database initialization
+## Getting Started
 
-* How to run the test suite
+- To get a local copy of this repository enter the following command in you terminal:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+git clone git@github.com:Nasa28/private-events.git
 
-* Deployment instructions
+```
+## Installations
 
-* ...
+- Open a terminal and `cd` to the cloned repository.
+
+```
+Run bundle exec rake webpacker:install
+
+```
+
+``` 
+ Run `bundle install
+
+```
+```
+ Run `rails db:migrate` 
+
+```
+
+### Usage
+
+- Run the server using `rails s`
+- In your browser, go to http://127.0.0.1:3000
+- interact with the app
+- To test the Models using the console run `rails c`
+
+
+## Author 
+
+👨‍💻 **Kalu Chinasa Agu**
+
+- Github: [@Nasa28](https://github.com/Nasa28)
+-  Twitter: [@Ultimate_Nasa](https://twitter.com/Ultimate_Nasa)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kalu-chinasa-agu-a15080103/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Acknowledgments
+
+-  ![](https://img.shields.io/badge/Microverse-blueviolet)

@@ -1,0 +1,13 @@
+<%= render '/partials/home' if !log_in?%>
+
+<% if log_in?%>
+<h3>List of upcoming events</h3>
+
+ <%= render '/partials/future_event' %>
+ <br>
+ <br>
+ <h3>List of past events</h3>
+
+  <%= render '/partials/past_events' %>
+
+<%end%>
